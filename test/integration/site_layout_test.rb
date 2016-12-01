@@ -1,6 +1,9 @@
 require 'test_helper'
 
 class SiteLayoutTest < ActionDispatch::IntegrationTest
+  def setup
+    @user = users(:paul)
+  end
 
   test "layout links" do
     get root_path
